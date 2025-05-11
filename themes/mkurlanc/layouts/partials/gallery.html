@@ -1,0 +1,66 @@
+<section id="galeria" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-playfair text-3xl md:text-4xl text-center mb-12">Nasz Gabinet</h2>
+        {{ $images := .Site.Data.gallery.images }}
+        {{ $count := len $images }}
+        
+        <!-- Container with dynamic max-width based on image count -->
+        <div class="mx-auto" style="{{ if eq $count 4 }}max-width: 800px;{{ else }}max-width: 1200px;{{ end }}">
+            <!-- Grid container with dynamic classes -->
+            <div class="{{ if eq $count 4 }}
+                grid grid-cols-1 sm:grid-cols-2 gap-6
+                {{ else if eq $count 5 }}
+                grid grid-cols-1 sm:grid-cols-3 gap-6
+                {{ else }}
+                grid grid-cols-1 sm:grid-cols-3 gap-6
+                {{ end }}">
+                
+                <!-- First row -->
+                {{ range $index, $image := first (cond (eq $count 4) 2 3) $images }}
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <div class="relative pt-[75%]">
+                        <img 
+                            src="{{ . }}" 
+                            alt="Zdjęcie gabinetu"
+                            class="absolute inset-0 w-full h-full object-contain bg-white"
+                            style="object-position: center center;"
+                        >
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center p-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <p class="text-white text-lg font-playfair">
+                                Kliknij aby powiększyć
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+
+            <!-- Second row for 4 or 5 images -->
+            {{ if or (eq $count 4) (eq $count 5) }}
+            <div class="mt-6 grid gap-6 {{ if eq $count 4 }}grid-cols-1 sm:grid-cols-2{{ else }}grid-cols-1 sm:grid-cols-2 place-items-center mx-auto sm:w-2/3{{ end }}">
+                {{ range $index, $image := after (cond (eq $count 4) 2 3) $images }}
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <div class="relative pt-[75%]">
+                        <img 
+                            src="{{ . }}" 
+                            alt="Zdjęcie gabinetu"
+                            class="absolute inset-0 w-full h-full object-contain bg-white"
+                            style="object-position: center center;"
+                        >
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-center p-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            <p class="text-white text-lg font-playfair">
+                                Kliknij aby powiększyć
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section> 

@@ -1,0 +1,22 @@
+items:
+  - title: "Gabinet masażu"
+    url: "/images/gallery/gabinet-1.jpg"
+    description: "Przestronny i komfortowy gabinet masażu"
+
+  - title: "Stół do masażu"
+    url: "/images/gallery/stol-masaz.jpg"
+    description: "Profesjonalny stół do masażu z regulacją wysokości"
+
+  - title: "Bańki chińskie"
+    url: "/images/gallery/banki-chinskie.jpg"
+    description: "Komplet profesjonalnych baniek chińskich"
+
+  - title: "Kamienie do masażu"
+    url: "/images/gallery/kamienie.jpg"
+    description: "Zestaw kamieni do masażu gorącymi kamieniami"
+
+images:
+  - /images/gallery/gabinet-1.jpg
+  - /images/gallery/gabinet-2.jpg
+  - /images/gallery/gabinet-3.jpg
+  - /images/gallery/gabinet-4.jpg

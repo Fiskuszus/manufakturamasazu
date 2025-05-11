@@ -1,0 +1,74 @@
+title: "Cennik"
+description: "Sprawdź nasze ceny i wybierz masaż odpowiedni dla siebie"
+
+sections:
+  - title: "Masaże"
+    items:
+      - name: "Masaż klasyczny"
+        variants:
+          - duration: "30 min"
+            price: "100 zł"
+          - duration: "60 min"
+            price: "180 zł"
+          - duration: "90 min"
+            price: "250 zł"
+      - name: "Masaż bańką chińską"
+        variants:
+          - duration: "45 min"
+            price: "150 zł"
+          - duration: "60 min"
+            price: "200 zł"
+          - duration: "90 min"
+            price: "280 zł"
+      - name: "Masaż gorącymi kamieniami"
+        variants:
+          - duration: "60 min"
+            price: "200 zł"
+          - duration: "90 min"
+            price: "280 zł"
+      - name: "Masaż relaksacyjny"
+        variants:
+          - duration: "60 min"
+            price: "180 zł"
+          - duration: "90 min"
+            price: "250 zł"
+      - name: "Masaż leczniczy"
+        variants:
+          - duration: "60 min"
+            price: "200 zł"
+          - duration: "90 min"
+            price: "280 zł"
+      - name: "Masaż sportowy"
+        variants:
+          - duration: "60 min"
+            price: "200 zł"
+          - duration: "90 min"
+            price: "280 zł"
+
+  - title: "Pozostałe usługi"
+    items:
+      - name: "Funkcjonalny trening motoryczny"
+        variants:
+          - duration: "60 min"
+            price: "180 zł"
+          - duration: "90 min"
+            price: "250 zł"
+      - name: "Suche igłowanie"
+        variants:
+          - duration: "30 min"
+            price: "150 zł"
+          - duration: "60 min"
+            price: "250 zł"
+
+additional_info:
+  - title: "Wizyty wyjazdowe"
+    description: "Dostępne na terenie Katowic i okolic"
+    price: "+50 zł"
+  
+  - title: "Ceny mogą się różnić"
+    description: "W zależności od indywidualnych potrzeb i czasu trwania zabiegu"
+
+payment_methods:
+  - "Gotówka"
+  - "Karta płatnicza"
+  - "BLIK" 

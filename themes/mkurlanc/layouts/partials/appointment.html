@@ -1,0 +1,207 @@
+<section id="umow-wizyte" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="font-playfair text-3xl md:text-4xl text-center mb-4">{{ .Site.Data.appointment.title }}</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            {{ .Site.Data.appointment.description }}
+        </p>
+
+        <!-- Informacje kontaktowe -->
+        <div class="bg-white p-8 rounded-xl shadow-lg mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-black rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-medium mb-2">Adres</h3>
+                    <p class="text-gray-700">{{ .Site.Data.appointment.contact_info.address }}</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-black rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-medium mb-2">Telefon</h3>
+                    <a href="{{ .Site.Data.appointment.contact_info.phone }}" class="text-gray-700 hover:text-black transition-colors duration-200">
+                        {{ .Site.Data.appointment.contact_info.phone }}
+                    </a>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-black rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-xl font-medium mb-2">Email</h3>
+                    <a href="mailto:{{ .Site.Data.appointment.contact_info.email }}" class="text-gray-700 hover:text-black transition-colors duration-200">
+                        {{ .Site.Data.appointment.contact_info.email }}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Godziny otwarcia -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-medium">Godziny otwarcia</h3>
+                </div>
+                <ul class="space-y-3">
+                    {{ range .Site.Data.appointment.booking_info }}
+                        {{ if eq .title "Godziny otwarcia" }}
+                            {{ range .items }}
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-black mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+
+            <!-- Wymagania -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-medium">Wymagania</h3>
+                </div>
+                <ul class="space-y-3">
+                    {{ range .Site.Data.appointment.booking_info }}
+                        {{ if eq .title "Wymagania" }}
+                            {{ range .items }}
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-black mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+
+            <!-- Płatności -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-medium">Płatności</h3>
+                </div>
+                <ul class="space-y-3">
+                    {{ range .Site.Data.appointment.booking_info }}
+                        {{ if eq .title "Płatności" }}
+                            {{ range .items }}
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-black mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+
+            <!-- Dodatkowe informacje -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-playfair text-2xl font-medium">Dodatkowe informacje</h3>
+                </div>
+                <ul class="space-y-3">
+                    {{ range .Site.Data.appointment.booking_info }}
+                        {{ if eq .title "Dodatkowe informacje" }}
+                            {{ range .items }}
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-black mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-700">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Dojazd i mapa -->
+        <div class="mt-12">
+            <h3 class="font-playfair text-2xl font-medium text-center mb-8">Jak do nas trafić</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Informacje o dojeździe -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="space-y-6">
+                        {{ range .Site.Data.directions.transport }}
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-8 h-8 mt-1">
+                                {{ if eq .type "car" }}
+                                <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                {{ else if eq .type "bus" }}
+                                <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                {{ else if eq .type "train" }}
+                                <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                {{ end }}
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-medium text-black">{{ .title }}</h4>
+                                <p class="text-gray-700 mt-1">{{ .description }}</p>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <!-- Mapa -->
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <iframe 
+                        src="{{ .Site.Data.appointment.map.embed_url }}"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Przycisk kontaktowy -->
+        <div class="mt-12 flex justify-center">
+            <a href="#kontakt" class="inline-block px-8 py-3 border-2 border-black text-black hover:bg-black hover:text-white transition-colors duration-200 font-medium">
+                Skontaktuj się
+            </a>
+        </div>
+    </div>
+</section> 

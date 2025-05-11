@@ -1,0 +1,37 @@
+title: "Umów wizytę"
+description: "Zapraszam do kontaktu w celu umówienia wizyty lub uzyskania dodatkowych informacji."
+
+contact_info:
+  phone: "tel:+48123456789"
+  email: "kontakt@manufakturamasazu.pl"
+  address: "ul. Przykładowa 123, 40-000 Katowice"
+
+booking_info:
+  - title: "Godziny otwarcia"
+    items:
+      - "Poniedziałek - Piątek: 9:00 - 20:00"
+      - "Sobota: 10:00 - 18:00"
+      - "Niedziela: Zamknięte"
+
+  - title: "Wymagania"
+    items:
+      - "Prosimy o przybycie 10 minut przed umówioną wizytą"
+      - "W przypadku odwołania wizyty prosimy o informację minimum 24h wcześniej"
+      - "Prosimy o zabranie wygodnego ubrania na zmianę"
+
+  - title: "Płatności"
+    items:
+      - "Akceptujemy płatności gotówką"
+      - "Możliwość płatności przelewem"
+      - "Wystawiamy faktury VAT"
+
+  - title: "Dodatkowe informacje"
+    items:
+      - "Pierwsza wizyta trwa dłużej ze względu na wywiad"
+      - "Oferujemy pakiety masaży w atrakcyjnych cenach"
+      - "Wizyty mobilne dostępne po wcześniejszym kontakcie"
+
+map:
+  coordinates: "50.2649,19.0238"  # Przykładowe współrzędne dla Katowic
+  zoom: "15"
+  embed_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.1234567890123!2d19.0238!3d50.2649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDE1JzUzLjYiTiAxOcKwMDEnMzkuNyJF!5e0!3m2!1spl!2spl!4v1234567890" 

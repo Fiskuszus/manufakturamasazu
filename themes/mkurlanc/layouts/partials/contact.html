@@ -1,0 +1,25 @@
+<section id="kontakt" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-playfair text-3xl md:text-4xl mb-6">Umów wizytę</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Zapraszam do kontaktu w celu umówienia wizyty lub uzyskania dodatkowych informacji.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div>
+                <h3 class="font-semibold mb-2">Adres</h3>
+                <p class="text-gray-600">{{ .Site.Params.address }}</p>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-2">Telefon</h3>
+                <p class="text-gray-600">{{ .Site.Params.phone }}</p>
+            </div>
+            <div>
+                <h3 class="font-semibold mb-2">Email</h3>
+                <p class="text-gray-600">{{ .Site.Params.email }}</p>
+            </div>
+        </div>
+        <a href="tel:{{ .Site.Params.phone }}" class="inline-block px-8 py-3 bg-black text-white hover:bg-gray-800 transition-colors duration-200">
+            Zadzwoń teraz
+        </a>
+    </div>
+</section> 

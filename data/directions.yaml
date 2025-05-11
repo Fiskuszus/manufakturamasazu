@@ -1,0 +1,16 @@
+description: "Znajdź nas łatwo - jesteśmy w centrum miasta. Oferujemy dogodny dojazd komunikacją miejską oraz parking dla klientów."
+
+transport:
+  - type: "car"
+    title: "Samochodem"
+    description: "Przy gabinecie znajduje się bezpłatny parking dla klientów. Możesz zaparkować na ulicy lub na dedykowanym parkingu."
+
+  - type: "bus"
+    title: "Autobusem"
+    description: "Przystanek autobusowy znajduje się 100m od gabinetu. Linie: 101, 102, 103. Wysiądź na przystanku 'Centrum'."
+
+  - type: "train"
+    title: "Pociągiem"
+    description: "Stacja kolejowa jest oddalona o 5 minut spacerem. Po wyjściu ze stacji skręć w prawo i idź prosto."
+
+map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1234.5678!2d12.3456!3d34.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM0JzA0LjQiTiAxMsKwMjAnNDEuMiJF!5e0!3m2!1spl!2spl!4v1234567890" 

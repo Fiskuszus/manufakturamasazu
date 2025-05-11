@@ -1,0 +1,33 @@
+baseURL = 'https://manufakturamasazu.github.io/'
+languageCode = 'pl'
+title = 'Manufaktura Masażu'
+theme = 'mkurlanc'
+
+[params]
+  description = "Profesjonalne usługi masażu"
+  author = "Miłosz Kurlanc"
+  email = "milosz.kurlanc@gmail.com"
+  phone = "+48 502 955 320"
+  address = "ul. Graniczna 61a, 40-018 Katowice"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Strona główna"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "services"
+    name = "Usługi"
+    url = "/uslugi/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "O mnie"
+    url = "/o-mnie/"
+    weight = 3
+  [[menu.main]]
+    identifier = "contact"
+    name = "Kontakt"
+    url = "/kontakt/"
+    weight = 4

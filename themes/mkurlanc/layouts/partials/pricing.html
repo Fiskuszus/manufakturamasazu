@@ -1,0 +1,59 @@
+<section id="cennik" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 relative">
+            <span class="inline-block text-black/10 font-playfair text-7xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10">Cennik</span>
+            <h2 class="font-playfair text-3xl md:text-4xl mb-4 relative z-10">{{ .Site.Data.pricing.title }}</h2>
+            <div class="w-24 h-1 bg-black mx-auto mb-4"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto">{{ .Site.Data.pricing.description }}</p>
+        </div>
+
+        {{ range .Site.Data.pricing.sections }}
+        <div class="mb-16">
+            <h3 class="font-playfair text-2xl md:text-3xl text-center mb-8">{{ .title }}</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {{ range .items }}
+                <div class="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <div class="p-8">
+                        <h4 class="font-playfair text-xl mb-6">{{ .name }}</h4>
+                        <div class="space-y-4 mb-8">
+                            {{ range .variants }}
+                            <div class="flex justify-between items-center text-gray-600">
+                                <span>{{ .duration }}</span>
+                                <span class="font-medium text-black">{{ .price }}</span>
+                            </div>
+                            {{ end }}
+                        </div>
+                        <a href="tel:+48123456789" class="block w-full py-3 px-6 text-center font-medium border-2 border-black text-black hover:bg-black hover:text-white transition-colors duration-300 rounded-md">
+                            Umów wizytę
+                        </a>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+
+        <!-- Dodatkowe informacje -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {{ range .Site.Data.pricing.additional_info }}
+            <div class="bg-gray-50 rounded-lg p-6 text-center">
+                <h4 class="font-playfair text-xl mb-3">{{ .title }}</h4>
+                <p class="text-gray-600 mb-2">{{ .description }}</p>
+                {{ if .price }}
+                <p class="font-medium text-black text-lg">{{ .price }}</p>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Metody płatności -->
+        <div class="mt-12 text-center">
+            <h4 class="font-playfair text-xl mb-6">Akceptowane metody płatności</h4>
+            <div class="flex flex-wrap justify-center gap-4">
+                {{ range .Site.Data.pricing.payment_methods }}
+                <span class="px-4 py-2 bg-gray-50 rounded-md text-gray-600">{{ . }}</span>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section> 
