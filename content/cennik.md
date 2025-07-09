@@ -8,7 +8,7 @@ type: "cennik"
 ## Masaże
 
 ### Masaż klasyczny
-- 30 minut - 100 zł
+- 30 minut - 120 zł
 - 60 minut - 180 zł
 - 90 minut - 250 zł
 - 120 minut - 300 zł
